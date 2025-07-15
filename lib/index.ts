@@ -1,7 +1,7 @@
 import { Plugin, ResolvedConfig } from "vite";
-import * as Eta from "eta";
+import { Eta, EtaConfig } from "eta";
 
-type EtaRenderOptions = typeof Eta.config;
+type EtaRenderOptions = EtaConfig;
 type EtaRenderOptionsFn = (config: ResolvedConfig) => EtaRenderOptions;
 type ViteEtaPluginDataType =
   | Record<string, any>
@@ -30,20 +30,26 @@ function ViteEtaPlugin(
       config = resolvedConfig;
     },
     transformIndexHtml: {
-      enforce: "pre",
-      async transform(html) {
+      order: "pre",
+      handler(html) {
         if (typeof data === "function") data = data(config);
         let etaOptions = options && options.eta ? options.eta : {};
         if (typeof etaOptions === "function") etaOptions = etaOptions(config);
-        html = await Eta.render(
+
+        const eta = new Eta({
+          views: config.root,
+          ...etaOptions
+        });
+
+        html = eta.renderString(
           html,
           {
-            ...data,
-          },
-          {
-            ...etaOptions,
+            NODE_ENV: config.mode,
+            isDev: config.mode === "development",
+            ...data
           }
         );
+
         return html;
       },
     },
