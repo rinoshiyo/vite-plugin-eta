@@ -1,8 +1,8 @@
-# vite-plugin-eta
+# @rinoshiyo/vite-plugin-eta
 
 Use [Eta](https://www.npmjs.com/package/eta) template language in your entrypoint i.e `index.html`
 
-**Note:** For Vite version < `5` use [`v1.0.2`](https://www.npmjs.com/package/vite-plugin-eta/v/1.0.2) of this plugin.
+**Compatibility Note:** This plugin requires **Vite v5 or newer**.
 
 ## Menu
 
@@ -14,9 +14,9 @@ Use [Eta](https://www.npmjs.com/package/eta) template language in your entrypoin
 ### Installation
 
 ```sh
-npm i vite-plugin-eta
+npm i @rinoshiyo/vite-plugin-eta
 # or
-yarn add vite-plugin-eta
+yarn add @rinoshiyo/vite-plugin-eta
 ```
 
 ### Usage
@@ -25,7 +25,7 @@ File: **vite.config.js**
 
 ```javascript
 import {defineConfig} from "vite";
-import {ViteEtaPlugin} from "vite-plugin-eta";
+import {ViteEtaPlugin} from "@rinoshiyo/vite-plugin-eta";
 
 export default defineConfig({
   plugins: [
@@ -126,3 +126,11 @@ export default defineConfig({
   ],
 });
 ```
+
+---
+
+## 🧡 Acknowledgements
+
+This project is a fork of the original [`vite-plugin-eta`](https://www.npmjs.com/package/vite-plugin-eta) created by **moyui默羽**. **I extend my sincere thanks** to the original author for creating and maintaining the initial project.
+
+Furthermore, the structure and documentation of this plugin were heavily inspired by the excellent work done on **[`vite-plugin-ejs`](https://www.npmjs.com/package/vite-plugin-ejs)** by **trapcodeio**.
