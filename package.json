@@ -1,24 +1,46 @@
 {
-  "name": "vite-plugin-eta",
-  "version": "1.0.2",
-  "description": "Use Eta in your entrypoint",
+  "name": "@rinoshiyo/vite-plugin-eta",
+  "version": "1.0.0",
+  "description": "A Vite plugin to seamlessly use Eta templating engine in your project entry point.",
   "main": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
-  "repository": "https://github.com/moyui/vite-plugin-eta.git",
-  "author": "moyui默羽",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rinoshiyo/vite-plugin-eta.git"
+  },
+  "author": "rinoshiyo",
+  "license": "MIT",
+  "keywords": [
+    "vite",
+    "vite plugin",
+    "plugin",
+    "handlebars",
+    "ejs",
+    "eta",
+    "template engine",
+    "embedded template engine",
+    "layouts",
+    "partials",
+    "typescript types"
+  ],
+  "bugs": {
+    "url": "https://github.com/rinoshiyo/vite-plugin-eta/issues"
+  },
+  "homepage": "https://github.com/rinoshiyo/vite-plugin-eta#readme",
   "private": false,
   "scripts": {
     "build": "npx tsc -p tsconfig.json",
     "watch": "npx tsc --watch",
     "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.0.2",
-    "vite": "^4.2.1"
+    "typescript": "^5.8.3",
+    "vite": "^7.0.4"
   },
   "dependencies": {
-    "eta": "^2.0.1"
+    "eta": "^3.5.0"
   }
 }

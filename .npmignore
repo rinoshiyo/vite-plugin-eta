@@ -1,7 +1,0 @@
-node_modules
-lib
-*.log
-.idea
-
-*.ts
-!*.d.ts
