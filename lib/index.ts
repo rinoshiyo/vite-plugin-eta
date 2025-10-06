@@ -10,7 +10,7 @@ type ViteEtaPluginOptions = { eta?: EtaRenderOptions | EtaRenderOptionsFn };
 
 /**
  * Vite Eta Plugin Function
- * See https://github.com/moyui/vite-plugin-eta for more information
+ * See https://github.com/rinoshiyo/vite-plugin-eta for more information
  * @example
  * export default defineConfig({
  *  plugins: [

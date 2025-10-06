@@ -1,6 +1,6 @@
 {
   "name": "@rinoshiyo/vite-plugin-eta",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vite plugin to seamlessly use Eta templating engine in your project entry point.",
   "main": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
